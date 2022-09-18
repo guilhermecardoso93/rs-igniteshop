@@ -12,6 +12,7 @@ import 'keen-slider/keen-slider.min.css'
 import {Handbag} from 'phosphor-react'
 import {useShoppingCart} from 'use-shopping-cart'
 import { Cart } from "../components/cart";
+import { Header } from "../components/header";
 
 interface ProductProps {
   id: string,
@@ -52,6 +53,7 @@ export default function Home({products}: HomeProps) {
       <Head>
         <title>Ignite Shop</title>
       </Head>
+      <Header />
       <HomeContainer ref={sliderRef} className="keen-slider">
         {products.map(product => {
           return (

@@ -8,7 +8,7 @@ import axios from 'axios'
 
 export function Cart() {
   
-  const { removeItem, cartDetails, formattedTotalPrice, handleCloseCart,} = useShoppingCart()
+  const { removeItem, cartDetails, formattedTotalPrice, handleCloseCart, clearCart} = useShoppingCart()
   
   const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] = useState(false)
 
@@ -28,6 +28,7 @@ export function Cart() {
 
       const {checkoutUrl} = response.data
       window.location.href = checkoutUrl
+      clearCart()
     }
     catch(err){
       setIsCreatingCheckoutSession(false)

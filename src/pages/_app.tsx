@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     currency="BRL"
     >
       <Container>
-        <Header />
+        
         
         <Component {...pageProps} />    
         

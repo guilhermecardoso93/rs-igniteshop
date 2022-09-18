@@ -10,6 +10,7 @@ import Stripe from 'stripe'
 import { useState } from "react"
 import {useShoppingCart} from 'use-shopping-cart'
 import { Cart } from "../../components/cart"
+import { Header } from "../../components/header"
 interface ProductProps {
   product: {
     id: string,
@@ -50,6 +51,7 @@ export default function Product({product}: ProductProps){
       <Head>
         <title>{product.name} | Ignite Shop</title>
       </Head>
+      <Header />
         <ProductContainer>
           <ImageContainer>
             <Image blurDataURL={placeholderShirt.src} src={product.imageUrl} width={480} height={520} alt="" />
